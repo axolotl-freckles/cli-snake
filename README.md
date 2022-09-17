@@ -3,7 +3,8 @@ A windows (for now, I hope) comand promp snake game
 
 ## Use
 
-Just type the executable name in the terminal and that should launch the main menu.
+To start, double click on the .exe file or write the name on the command prompt,
+thought you should first navigate to the correct directory first.
 
 The ESC key exits the current screen or closes the game (if on the main menu).
 
