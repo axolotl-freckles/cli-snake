@@ -47,3 +47,6 @@ This little experiment was made to understand and to apply knoledge about thread
 rudimentary render-simulation pipelines and static libraries. So feel free to see what makes things tick.
 It was also an excuse to dip my toes into a more developer oriented approach, considering
 readability and structure while developing. It's not perfect, but it's a start.
+
+Right now, it only works for windows, as I've included some windows exclusive libraries to
+work with the windows shell. I might change that later and port the proyect to Linux.
