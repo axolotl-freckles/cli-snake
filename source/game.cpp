@@ -54,11 +54,17 @@ void generate_new_apple(
 
 int game_screen(int const * const keys, int const * const rules) {
 	// Constant initialization and desambiguation
-	long const GAME_WIDTH  = rules[0];
-	long const GAME_HEIGHT = rules[1];
+	long const GAME_WIDTH  = std::min<int>(
+		std::max<int>(rules[0], MIN_HGAME_SIZE),
+		get_console_width()
+	);
+	long const GAME_HEIGHT = std::min<int>(
+		std::max<int>(rules[1], MIN_VGAME_SIZE),
+		get_console_height()
+	);
 	bool const BORDER      = (bool)rules[2];
-	unsigned long const hres = std::max<long>(GAME_WIDTH, MIN_HGAME_SIZE);
-	unsigned long const vres = std::max<long>(GAME_HEIGHT, MIN_VGAME_SIZE) + 2;
+	unsigned long const hres = GAME_WIDTH;
+	unsigned long const vres = GAME_HEIGHT + 2;
 
 	buff_container buff_cont = create_buffer(hres, vres);
 
@@ -111,7 +117,7 @@ int game_screen(int const * const keys, int const * const rules) {
 		}
 		phys_return = physics(buff_cont, keys, rules, &pressed_key, snake, apple, head);
 		printf("%s\n", buff_cont.buffer);
-		Sleep(SECOND);
+		Sleep(SECOND - (SECOND/20));
 	}
 
 	// The keyboard listener usually has to wait for a key before it stops fully

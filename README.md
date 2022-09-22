@@ -1,4 +1,5 @@
 # cli-snake
+
 A windows (for now, I hope) comand promp snake game
 
 ## Use
@@ -22,7 +23,7 @@ or go to the exit option to return to the main menu.
 
 In "Game Settings" you will find the option to change the game screen or the game
 border. The game screen defines the space that the snake can move in and the game
-border will determine if the snake dies when it hits the wall (solid) or if it 
+border will determine if the snake dies when it hits the wall (solid) or if it
 teleports to the other side (borderless).
 
 ## Game

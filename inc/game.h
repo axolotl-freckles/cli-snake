@@ -5,7 +5,7 @@ extern "C" {
 	#include <clirender.h>
 }
 
-#define MIN_HGAME_SIZE 10
+#define MIN_HGAME_SIZE 16
 #define MIN_VGAME_SIZE 10
 
 struct coordinate {

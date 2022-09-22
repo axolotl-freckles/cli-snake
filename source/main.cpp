@@ -31,7 +31,7 @@ int main(void) {
 	int keys[] = {DEFAULT_LEFT, DEFAULT_UP, DEFAULT_RIGHT, DEFAULT_DOWN};
 	// Rules are: Width, height, border;
 	// Might add speed later
-	int rules[] = {16, 10, 1};
+	int rules[] = {MIN_HGAME_SIZE, MIN_VGAME_SIZE, 1};
 
 	do {
 		select = main_menu(keys);

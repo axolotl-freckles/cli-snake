@@ -2,6 +2,9 @@
 
 #define SECOND 1000
 
+int get_console_width();
+int get_console_height();
+
 struct buff_container {
 	char * buffer;
 	unsigned long buffer_size;

@@ -4,6 +4,18 @@
 
 #include <Windows.h>
 
+int get_console_width() {
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+	GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
+	return csbi.srWindow.Right - csbi.srWindow.Left + 1;
+}
+
+int get_console_height() {
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+	GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
+	return csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
+}
+
 char * get_tile
 	(
 		char * const buffer,
