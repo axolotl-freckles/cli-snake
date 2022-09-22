@@ -1,5 +1,5 @@
-DEBUG_FLAGS = -Wall -g -Og -static-pie -I./inc -L./libs
-FINAL_FLAGS = -Wall -Os -static-pie -I./inc -L./libs #-DRELEASE
+DEBUG_FLAGS = -Wall -g -Og -static-libstdc++ -static-libgcc -I./inc -L./libs
+FINAL_FLAGS = -Wall -Os -static-libstdc++ -static-libgcc -I./inc -L./libs #-DRELEASE
 
 SOURCE_DIR = ./source
 
